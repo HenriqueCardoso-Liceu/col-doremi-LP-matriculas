@@ -7,10 +7,11 @@ import ChildImage from './assets/images/child.png'
 import Logo from './assets/logo.png'
 import SchoolImage from './assets/images/school.jpg'
 import SchoolImage2 from './assets/images/school2.jpg'
+import School3Image from './assets/images/school3.png'
+import School4Image from './assets/images/school4.png'
 import JudoImage from './assets/images/judo.jpg'
 import ClassImage from './assets/images/class.jpg'
 import Child2Image from './assets/images/child2.jpg'
-import Child3Image from './assets/images/child3.jpg'
 import StudentImage from './assets/images/student.jpg'
 import Student2Image from './assets/images/student2.jpg'
 import GardenImage from './assets/images/horta.jpg'
@@ -22,28 +23,27 @@ import { IoLogoWhatsapp } from "react-icons/io"
 
 const features = [
   {
-    title: '34 anos de história',
-    description: 'Tradição e experiência em Itaquaquecetuba.',
+    title: 'Ensino de qualidade',
+    description: 'Uma proposta pedagógica que acompanha cada etapa do desenvolvimento.',
+    image:StudentImage,
+  },
+  {
+    title: 'Acompanhamento próximo',
+    description: 'Uma equipe presente, que conhece e acompanha cada aluno de verdade.',
     image:
       SchoolImage,
   },
   {
-    title: '10 mil m² de área verde',
-    description: 'Quadra, horta e espaço aberto: aula que sai da sala de aula.',
-    image:
-      SchoolImage2,
-  },
-  {
     title: 'Formação completa',
-    description: 'Balé, judô, libras e inglês, sem precisar pagar escolinha à parte. ',
+    description: 'Balé, judô, libras e inglês, sem precisar pagar escolinha à parte.',
     image:
       JudoImage,
   },
   {
-    title: 'Acompanhamento de perto',
-    description: 'Equipe que conhece seu filho pelo nome.',
+    title: 'No Caiuby, pertinho de você',
+    description: 'Mais praticidade para a rotina e mais tranquilidade para a família.',
     image:
-      ClassImage,
+      SchoolImage2,
   },
 ]
 
@@ -326,8 +326,9 @@ function App() {
 
   return (
     <>
-      <section className="px-2 pt-10 xl:pt-0 xl:flex items-center justify-center relative overflow-hidden">
-        <div className="min-[1280px]:absolute xl:block left-10 z-20 overflow-hidden px-6 sm:px-10 lg:px-16">
+      <section className="hero-section px-2 xl:flex items-center justify-center relative overflow-hidden min-h-screen text-[#01205F]">
+        <div className="hero-side-bg hidden xl:block"/>
+        <div className="xl:shrink-0 xl:block z-20 overflow-hidden px-6 sm:px-10 lg:px-16">
         
           <div className="relative mx-auto max-w-7xl">
             
@@ -339,23 +340,14 @@ function App() {
                 <img src={Logo} alt="" />
               </div>
 
-              {/* Ano */}
-              <div className="flex h-[72px] w-[66px] items-center justify-center rounded-xl bg-[#FFE500] text-center text-[25px] font-black leading-[0.9] text-[#21458A]">
-                <span>
-                  20
-                  <br />
-                  27
-                </span>
-              </div>
-
               {/* Matrículas abertas */}
-              <div className="flex h-[72px] items-center rounded-xl bg-[#279B48] px-5">
-                <div className="leading-none">
-                  <span className="block text-[19px] font-bold tracking-wide text-[#21458A]">
+              <div className="flex h-[72px] items-center rounded-xl px-5 bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605]">
+                <div className="leading-none text-white">
+                  <span className="block text-[19px] font-bold tracking-wide">
                     MATRÍCULAS
                   </span>
 
-                  <span className="block text-[28px] font-extrabold leading-7 text-white">
+                  <span className="block text-[28px] font-extrabold leading-7">
                     ABERTAS
                   </span>
                 </div>
@@ -363,50 +355,27 @@ function App() {
             </div>
 
             {/* Conteúdo */}
-            <div className="mt-12 items-center grid gap-14">
+            <div className="mt-5 items-center grid gap-14">
               
               {/* Textos */}
               <div className="max-w-2xl text-center md:text-left">
-                <h1 className="text-5xl font-medium leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[72px]">
-                  <span className="text-[#FFE500]">
-                    A escola certa
+                <h1 className="text-5xl leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[72px] mb-5">
+                  <span className="font-thin">
+                    Escola de excelência,
                   </span>
 
-                  <br />
+                  <h1 className="font-medium bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] bg-clip-text text-transparent">perto de você.</h1>
 
-                  <span className="text-white">
-                    para sua família.
-                  </span>
                 </h1>
 
-                <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">
-                  Um colégio que une{" "}
-                  <strong className="font-bold text-white">
-                    acolhimento, ensino de qualidade
-                  </strong>{" "}
-                  e uma estrutura completa para{" "}
-                  <strong className="font-bold text-white">
-                    acompanhar seu filho em cada fase.
-                  </strong>
+                <p className="max-w-xl text-2xl leading-relaxed text-[#02277E]">
+                  <b>Qualidade de ensino, acolhimento </b>e uma formação completa para seu filho, <b>aqui mesmo no Caiuby.</b>
                 </p>
               </div>
 
               {/* Formulário */}
               <div className="relative">
                 
-                {/* Selo */}
-                <div className="absolute -right-5 -top-20 z-10 sm:-top-10 sm:-right-2 flex h-28 w-28 rotate-[-8deg] items-center justify-center rounded-full bg-[#193D82] text-center shadow-xl ring-4 ring-white/10 sm:-right-4 sm:h-32 sm:w-32" id="agendar-visita">
-                  <div>
-                    <span className="block text-xl font-black leading-none text-white">
-                      VAGAS
-                    </span>
-
-                    <span className="block text-sm font-bold leading-none text-[#FFE500]">
-                      LIMITADAS
-                    </span>
-                  </div>
-                </div>
-
                 <div className="rounded-[30px] bg-white p-7 shadow-2xl sm:p-9">
                   
                   <h2 className="text-2xl font-light leading-tight text-[#21458A] sm:text-[28px]">
@@ -460,7 +429,7 @@ function App() {
                         <button
                           type="button"
                           onClick={handlePreviousStep}
-                          className="flex h-[62px] flex-1 items-center justify-center rounded-full border border-[#D9E2F2] bg-white text-lg font-bold text-[#162F63] transition hover:bg-[#F4F8FF]"
+                          className="flex h-[62px] flex-1 items-center justify-center rounded-full border border-[#D9E2F2] bg-white text-lg font-bold text-[#162F63] transition hover:bg-gray-300 hover:text-white"
                         >
                           Voltar
                         </button>
@@ -479,10 +448,10 @@ function App() {
                             justify-center
                             gap-4
                             rounded-full
-                            bg-[#FFE500]
+                            bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605]
                             text-lg
                             font-bold
-                            text-[#162F63]
+                            text-white
                             shadow-[0_8px_20px_rgba(255,229,0,0.18)]
                             transition
                             hover:-translate-y-0.5
@@ -510,10 +479,10 @@ function App() {
                             justify-center
                             gap-4
                             rounded-full
-                            bg-[#FFE500]
+                            bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605]
                             text-lg
                             font-bold
-                            text-[#162F63]
+                            text-white
                             shadow-[0_8px_20px_rgba(255,229,0,0.18)]
                             transition
                             hover:-translate-y-0.5
@@ -542,11 +511,12 @@ function App() {
           </div>
         </div>
 
-        <span className="min-[1280px]:absolute min-[1280px]:right-[-200px] min-[1670px]:right-0 z-10">
-          <img src={ChildImage} alt="Child" className='xl:h-screen object-cover'/>
+        <span className="xl:-ml-24 xl:min-w-0 xl:self-end z-10 ">
+          <img src={ChildImage} alt="Child" className='xl:w-full object-cover object-left'/>
         </span>
 
       </section>
+
 
 
       {/* faixa */}
@@ -556,11 +526,11 @@ function App() {
             INFANTIL
           </div>
 
-          <div className="text-center border-x px-[7%] sm:px-none sm:flex-1 border-[#344565] py-5">
+          <div className="text-center px-8 border-x sm:px-none sm:flex-1 border-[#344565] py-5">
             FUND. I e II
           </div>
 
-          <div className="text-center border-[#344565] py-5 sm:flex-1 pr-5 md:pr-0">
+          <div className="text-center py-5 sm:flex-1 pr-5 md:pr-0">
             ENSINO MÉDIO
           </div>
         </div>
@@ -568,17 +538,18 @@ function App() {
 
       {/* diferenciais */}
       <section className="diff-section relative overflow-hidden bg-[#F3F3F1] px-4 py-20 sm:px-6 lg:px-8" id="diferenciais">
-        <div className="diff-grid absolute inset-0 opacity-70" />
 
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="flex justify-center">
-            <span className="inline-flex rounded-xl bg-[#FFE500] px-5 py-2 text-sm font-black uppercase tracking-[0.1em] text-[#0E2F67] shadow-sm">
+            <span className="inline-flex rounded-xl px-5 py-2 text-sm uppercase tracking-[0.1em] bg-[#0571F9] text-[#FFF] shadow-sm">
               Diferenciais
             </span>
           </div>
 
-          <h2 className="mt-7 text-center text-3xl font-black leading-tight tracking-[-0.05em] text-[#0E2F67] sm:text-5xl lg:text-[64px]">
-            Tudo o que ele precisa para crescer.
+          <h2 className="mt-7 text-center text-3xl font-semibold leading-tight tracking-[-0.05em] text-[#0E2F67] sm:text-5xl lg:text-[64px]">
+            Tudo o que seu filho precisa,
+            <br />
+            <span className='bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] bg-clip-text text-transparent'>mais perto da sua família.</span>
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
@@ -610,58 +581,51 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-[#0E2F67] px-9 py-4 text-lg font-bold text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
-                Quero agendar uma visita
+                QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
               </button>
             </a>
           </div>
         </div>
-
-        <div className="pointer-events-none absolute -bottom-14 right-0 h-52 w-52 rounded-full bg-[#F8D2D0]/80 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-10 left-[-5%] h-40 w-40 rounded-full bg-[#CBE7E0]/80 blur-2xl" />
-        <div className="pointer-events-none absolute bottom-0 right-[8%] h-28 w-28 rounded-full bg-[#CFE6FF]/80 blur-2xl" />
       </section>
 
       {/* proposta */}
-      <section className="proposal-section relative overflow-hidden bg-[#0B2F6A] px-4 py-20 text-white sm:px-6 lg:px-10">
-        <div className="proposal-badge absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2">
-          <span className="block h-10 w-10 rounded-full bg-[#FFE500] shadow-[0_6px_16px_rgba(255,229,0,0.35)]" />
-        </div>
-
+      <section className="proposal-section relative overflow-hidden px-4 py-20 sm:px-6 lg:px-10 text-[#01205F]">
         <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.08fr_1fr]">
           <div className="max-w-[570px]">
-            <span className="inline-flex rounded-full bg-[#FFE500] px-5 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#102E6B] shadow-sm">
+            <span className="inline-flex rounded-full px-5 py-2 text-[11px] uppercase tracking-[0.18em] bg-[#0571F9] text-white shadow-sm">
               Proposta
             </span>
 
-            <h2 className="mt-7 text-4xl font-black leading-[0.95] tracking-[-0.04em] text-white sm:text-5xl lg:text-[66px]">
-              <span className="block text-[#FFE500]">Cuidado para acolher.</span>
-              <span className="block">Ensino para preparar.</span>
+            <h2 className="mt-7 text-4xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-5xl">
+              <span className="block text-[#01205F]">Excelência que você</span>
+              <span className="bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] bg-clip-text text-transparent">
+                percebe de perto.
+              </span>
             </h2>
 
-            <div className="mt-8 space-y-4 text-[17px] leading-relaxed text-white/90 sm:text-[22px]">
+            <div className="mt-8 space-y-4 text-[17px] leading-relaxed text-[#01205F] sm:text-[22px] mb-12">
               <div className="flex items-center gap-3">
-                <span className="h-5 w-1 bg-[#FFE500]" />
-                <p className="m-0">Crescer é muito mais do que passar de ano.</p>
+                <span className="h-5 w-[1.5px] bg-[#0571F9]" />
+                <p className="m-0 font-bold">Uma boa formação vai muito além do conteúdo.</p>
               </div>
 
-              <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                É desenvolver autonomia, criar vínculos, descobrir novos interesses e estar preparado para os próximos desafios.
-              </p>
-
-              <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                No Colégio Itaqua, cada aluno encontra espaço para aprender e desenvolver todo o seu potencial, com acompanhamento próximo e uma formação acadêmica consistente.
+              <p className="max-w-xl leading-relaxed sm:text-xl text-[#01205F]">
+                No Dó Ré Mi, cada aluno é estimulado <b>a aprender, participar, desenvolver autonomia</b> e se preparar para os próximos desafios, sempre com o <b className='text-[#0571F9]'>acompanhamento próximo</b> de professores e equipe pedagógica.
+                <br />
+                <br />
+                Aqui, <b>acolhimento e qualidade de ensino</b> caminham juntos.
               </p>
             </div>
 
             <a href="#">
               <button
                 type="button"
-                className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#FFE500] px-8 py-4 text-lg font-black text-[#102E6B] shadow-[0_12px_30px_rgba(255,229,0,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe93a]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
-                Quero conhecer a escola
+                QUERO CONHEÇER A ESCOLA
                 <span className="text-2xl leading-none">→</span>
               </button>
             </a>
@@ -674,11 +638,11 @@ function App() {
               </div>
 
               <div className="proposal-card proposal-card-top">
-                <img src={StudentImage} alt="Aluno em atividade escolar" />
+                <img src={School3Image} alt="Área para crianças." />
               </div>
 
               <div className="proposal-card proposal-card-bottom">
-                <img src={Child3Image} alt="Criança em atividade externa" />
+                <img src={School4Image} alt="Banco temático em formato de lápis" />
               </div>
             </div>
           </div>
@@ -689,18 +653,18 @@ function App() {
       <section className="relative overflow-hidden bg-[#f4f4f2] px-4 py-16 sm:px-6 lg:px-8" id="estrutura-experiencias">
         <div className="mx-auto max-w-6xl">
           <div className="flex justify-center">
-            <span className="inline-flex rounded-full bg-[#FFE500] px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-[#102E6B] shadow-sm">
+            <span className="inline-flex rounded-full bg-[#0571F9] px-4 py-2 text-[12px] font-normal uppercase tracking-[0.16em] text-white shadow-sm">
               Estrutura & Experiências
             </span>
           </div>
 
-          <h2 className="mt-8 text-center text-4xl font-medium leading-[0.95] tracking-[-0.05em] text-[#102E6B] sm:text-5xl lg:text-[64px]">
-            Aqui, tem espaço para crescer.
+          <h2 className="mt-8 text-center text-4xl font-medium leading-[0.95] tracking-[-0.05em] text-[#102E6B] sm:text-5xl lg:text-[50px]">
+            Um ambiente preparado para
+            <br />
+            <span className="bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] bg-clip-text text-transparent">
+              aprender, conviver e crescer
+            </span>
           </h2>
-
-          <p className="mt-4 text-center text-base text-[#1e3e75] sm:text-xl">
-            O aprendizado também acontece fora da sala de aula.
-          </p>
 
           <div className="mt-12 flex items-center justify-center gap-4 md:gap-6">
             <button
@@ -745,9 +709,9 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-[#1C5CA8] px-9 py-4 text-lg font-bold text-white shadow-[0_18px_35px_rgba(28,92,168,0.22)] transition hover:-translate-y-0.5 hover:bg-[#184d9c]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
-                Quero agendar uma visita
+                QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
               </button>
             </a>
@@ -762,42 +726,48 @@ function App() {
 
         <div className="relative z-10 mx-auto max-w-5xl text-center mt-16">
           <div className="flex justify-center">
-            <span className="inline-flex rounded-full bg-[#FFE500] px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-[#102E6B] shadow-sm">
+            <span className="inline-flex rounded-full bg-[#0571F9] px-4 py-2 text-[12px] font-normal uppercase tracking-[0.16em] text-white shadow-sm">
               Localização
             </span>
           </div>
 
-          <h2 className="mt-8 text-2xl md:text-4xl font-black leading-[0.95] tracking-[-0.05em] text-[#FFE500] sm:text-5xl lg:text-[40px]">
-            A escola certa <span className="text-[#102E6B]"> também precisa fazer sentido para sua família.</span>
+          <h2 className="mt-8 text-2xl md:text-4xl font-semibold leading-[0.95] tracking-[-0.05em] text-[#102E6B] sm:text-5xl lg:text-[40px]">
+            Uma escola de qualidade
+            <br />
+            <span className="bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] bg-clip-text text-transparent">
+              sem precisar ir longe.
+            </span>
           </h2>
-
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-[#1B3F7A] sm:text-xl">
-            Venha conhecer nossos espaços, conversar com a equipe e descobrir de perto tudo o que o Colégio Itaqua pode oferecer ao seu filho.
-          </p>
 
           <div className="location-map-wrap mt-10">
             <div className="location-map-card">
-              <iframe
-                title="Mapa do Colégio Itaqua"
-                src="https://www.google.com/maps?q=Av.%20Italo%20Adami%2C%201386%20-%20Vila%20Zeferina%2C%20Itaquaquecetuba%20-%20SP%2C%2008574-020&z=15&output=embed"
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.616895811047!2d-46.3255666!3d-23.438202399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7dae34be9afb%3A0x159956d739df733d!2zQ09Mw4lHSU8gRMOTIFLDiSBNSQ!5e0!3m2!1spt-BR!2sbr!4v1790601840590!5m2!1spt-BR!2sbr"
                 loading="lazy"
                 className="location-map-iframe"
                 referrerPolicy="no-referrer-when-downgrade"
               />
 
               <div className="location-address-bar">
-                Av. Italo Adami, 1386 - Vila Zeferina, Itaquaquecetuba - SP, 08574-020
+                Rod. Alberto Hinoto, 6468 - Jardim Mossapyra, Itaquaquecetuba - SP, 08588-001
               </div>
             </div>
           </div>
+
+          <div className="relative z-10 mx-auto max-w-3xl text-center mt-6 text-[#102E6B]">
+            <p>
+              <b>Estudar perto de casa</b> significa uma <b>rotina mais prática para os pais</b> e mais qualidade de vida para os alunos. E quando essa proximidade vem acompanhada de <b>ensino de qualidade, acolhimento</b> e uma equipe presente, a escolha fica ainda mais completa.
+            </p>
+          </div>
+
 
           <div className="mt-10 flex justify-center">
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-[#FFE500] px-8 py-4 text-lg font-black text-[#102E6B] shadow-[0_14px_30px_rgba(255,229,0,0.28)] transition hover:-translate-y-0.5 hover:bg-[#ffe93a]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
-                Agendar uma visita
+                QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
               </button>
             </a>
@@ -806,12 +776,14 @@ function App() {
       </section>
 
       <div className="divisor flex justify-center text-center">
-        <div className="bg-black/50 w-full h-full py-[20vh] text-white">
-          <p className='font-bold'>AQUI, TEM ESPAÇO PARA CRESCER.</p>
+        <div className="bg-[#0B1E3F]/75 w-full h-full py-[20vh] text-white">
+          <p className='font-semibold'>VENHA CONHECER DE PERTO</p>
           <h1 className='text-5xl sm:text-6xl lg:text-[72px]'>
-            <span className='text-[#FFE500] font-bold'>A escola certa </span>
+            Escola de Excelência,
             <br />
-            para sua família
+            <span className='font-semibold'>
+              perto de você.
+            </span>
           </h1>
         </div>
       </div>
@@ -819,12 +791,15 @@ function App() {
       <section className="faq-section" id="faq">
         <div className="faq-wrap">
           <div className="faq-left">
-            <span className="faq-badge">FAQ</span>
-            <p className='text-3xl md:text-5xl font-bold text-[#102E6B]'>Perguntas que toda mãe e pai faz</p>
+            <span className="faq-badge bg-[#0571F9] text-white">FAQ</span>
+            <p className='text-3xl md:text-5xl font-semibold text-[#102E6B] mb-10'>Perguntas que toda mãe e pai faz</p>
             <a href="#">
-              <button type="button" className="faq-cta">
-                Agendar uma visita
-                <span>→</span>
+              <button
+                type="button"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+              >
+                AGENDAR UMA VISITA
+                <span className="text-2xl leading-none">→</span>
               </button>
             </a>
           </div>

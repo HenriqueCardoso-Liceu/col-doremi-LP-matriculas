@@ -1,4 +1,4 @@
-import Logo from './../assets/logo.png'
+import Logo from './../assets/logo2.png'
 
 function Footer() {
   return (
@@ -19,7 +19,7 @@ function Footer() {
 
       <div className="footer-divider" />
 
-      <div className="footer-copy">© 2026 Colégio Itaqua. Todos os direitos reservados.</div>
+      <div className="footer-copy">© 2026 Colégio Dó Ré Mi. Todos os direitos reservados.</div>
     </footer>
   )
 }

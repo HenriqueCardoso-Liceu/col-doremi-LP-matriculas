@@ -3,21 +3,24 @@ import './styles/landing.css'
 import './styles/success.css'
 import Footer from './components/Footer'
 import SuccessScreen from './components/SuccessScreen'
+
 import ChildImage from './assets/images/child.png'
 import Logo from './assets/logo.png'
 import SchoolImage from './assets/images/school.jpg'
 import SchoolImage2 from './assets/images/school2.jpg'
 import School3Image from './assets/images/school3.png'
 import School4Image from './assets/images/school4.png'
-import JudoImage from './assets/images/judo.jpg'
-import ClassImage from './assets/images/class.jpg'
-import Child2Image from './assets/images/child2.jpg'
+import JiuJitsuImage from './assets/images/jiu-jitsu.png'
+import Child2Image from './assets/images/child2.png'
 import StudentImage from './assets/images/student.jpg'
-import Student2Image from './assets/images/student2.jpg'
-import GardenImage from './assets/images/horta.jpg'
-import BalleteImage from './assets/images/bale.png'
-import VilaKidsImage from './assets/images/vila-kids.png'
-import QuadraImage from './assets/images/quadra.png'
+import Student2Image from './assets/images/ingles.jpg'
+import BalleteImage from './assets/images/ballet.png'
+import QuadraImage from './assets/images/quadra.jpg'
+import RoboImage from './assets/images/robo.png'
+import LabImage from './assets/images/lab.png'
+import ParkImage from './assets/images/park.jpg'
+import ClassImage from './assets/images/libras.png'
+
 import { IoLogoWhatsapp } from "react-icons/io"
 
 
@@ -35,9 +38,9 @@ const features = [
   },
   {
     title: 'Formação completa',
-    description: 'Balé, judô, libras e inglês, sem precisar pagar escolinha à parte.',
+    description: 'Balé, Jiu Jitsu, libras e inglês, sem precisar pagar escolinha à parte.',
     image:
-      JudoImage,
+      JiuJitsuImage,
   },
   {
     title: 'No Caiuby, pertinho de você',
@@ -48,14 +51,14 @@ const features = [
 ]
 
 const slides = [
-  { title: 'Área verde', image: SchoolImage2 },
   { title: 'Quadra', image: QuadraImage },
-  { title: 'Horta', image: GardenImage },
-  { title: 'Villa Kids', image: VilaKidsImage },
   { title: 'Balé', image: BalleteImage },
-  { title: 'Judô', image: JudoImage },
-  { title: 'Libras', image: ClassImage },
+  { title: 'Jiu Jitsu', image: JiuJitsuImage },
   { title: 'Inglês', image: Student2Image },
+  { title: 'Robótica', image: RoboImage },
+  { title: 'Laboratório', image: LabImage },
+  { title: 'Libras', image: ClassImage },
+  { title: 'Parquinho', image: ParkImage },
 ]
 
 const faqItems = [
@@ -328,12 +331,12 @@ function App() {
     <>
       <section className="hero-section px-2 xl:flex items-center justify-center relative overflow-hidden min-h-screen text-[#01205F]">
         <div className="hero-side-bg hidden xl:block"/>
-        <div className="xl:shrink-0 xl:block z-20 overflow-hidden px-6 sm:px-10 lg:px-16">
+        <div className="xl:shrink-0 xl:block z-20 overflow-hidden px-2 sm:px-10 lg:px-16 py-5">
         
           <div className="relative mx-auto max-w-7xl">
             
             {/* Topo */}
-            <div className="flex flex-wrap items-center gap-3 ">
+            <div className="flex flex-wrap md:items-center gap-3 ">
               
               {/* Logo */}
               <div className="mr-3 flex items-center gap-2 text-white">
@@ -376,7 +379,7 @@ function App() {
               {/* Formulário */}
               <div className="relative">
                 
-                <div className="rounded-[30px] bg-white p-7 shadow-2xl sm:p-9">
+                <div className="rounded-[30px] bg-white p-7 shadow-2xl sm:p-9 mb-10">
                   
                   <h2 className="text-2xl font-light leading-tight text-[#21458A] sm:text-[28px]">
                     Preencha e{" "}
@@ -511,7 +514,7 @@ function App() {
           </div>
         </div>
 
-        <span className="xl:-ml-24 xl:min-w-0 xl:self-end z-10 ">
+        <span className="xl:-ml-24 xl:min-w-0 xl:self-end z-10">
           <img src={ChildImage} alt="Child" className='xl:w-full object-cover object-left'/>
         </span>
 
@@ -581,7 +584,7 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-md text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
                 QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
@@ -623,9 +626,9 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-md text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
-                QUERO CONHEÇER A ESCOLA
+                QUERO CONHECER A ESCOLA
                 <span className="text-2xl leading-none">→</span>
               </button>
             </a>
@@ -709,7 +712,7 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-md text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
                 QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
@@ -765,7 +768,7 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-md text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
                 QUERO AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
@@ -796,7 +799,7 @@ function App() {
             <a href="#">
               <button
                 type="button"
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-lg text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
+                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-[#3DA9E0] via-[#3445F4] to-[#BF0605] px-9 py-4 text-md text-white shadow-[0_18px_35px_rgba(14,47,103,0.25)] transition hover:-translate-y-0.5 hover:bg-[#123d87]"
               >
                 AGENDAR UMA VISITA
                 <span className="text-2xl leading-none">→</span>
@@ -831,7 +834,7 @@ function App() {
 
       {/* float wpp button */}
       <a
-        href="https://wa.me/5511972689163?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20matr%C3%ADculas."
+        href="https://wa.me/5511922225421?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20matr%C3%ADculas."
         target="_blank"
         rel="noopener noreferrer"
         className="text-3xl fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105"

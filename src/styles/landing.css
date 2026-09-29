@@ -442,7 +442,7 @@ section {
 
   .proposal-collage {
     width: min(100%, 340px);
-    grid-template-columns: minmax(70px, 1.55fr);
+    grid-template-columns: minmax(150px, 1.55fr);
     height: 330px;
     gap: 10px;
   }

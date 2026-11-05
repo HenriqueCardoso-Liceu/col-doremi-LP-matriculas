@@ -4,8 +4,14 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { BsClipboardDataFill } from "react-icons/bs";
 import { GrSchedule } from "react-icons/gr";
 import Footer from './Footer';
+import { useEffect } from 'react';
 
 export default function SuccessScreen() {
+  useEffect(() => {
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({ event: "lead_sucesso" });
+  }, []);
+
   return (
     <main className="success-screen">
 
@@ -17,7 +23,7 @@ export default function SuccessScreen() {
           <img src={Logo} alt="Colégio Itaqua" className="success-logo" />
         </div>
 
-        <div className="success-content">
+        <div className="success-content pb-10">
           <div className="success-copy">
             <div className="success-check" aria-label="Sucesso">
               <span>✓</span>

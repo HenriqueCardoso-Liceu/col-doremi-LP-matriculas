@@ -20,7 +20,7 @@
   position: relative;
   overflow: hidden;
   min-height: 80vh;
-  padding: 42px 40px 0;
+  padding: 42px 40px clamp(56px, 9vh, 112px);
 }
 
 .success-logo-wrap {
@@ -295,7 +295,7 @@
 
 @media (max-width: 640px) {
   .success-hero {
-    padding: 28px 18px 0;
+    padding: 28px 18px clamp(48px, 8vh, 80px);
   }
 
   .success-copy h1 {

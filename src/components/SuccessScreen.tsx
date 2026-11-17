@@ -4,13 +4,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { BsClipboardDataFill } from "react-icons/bs";
 import { GrSchedule } from "react-icons/gr";
 import Footer from './Footer';
-import { useEffect } from 'react';
 
 export default function SuccessScreen() {
-  useEffect(() => {
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    (window as any).dataLayer.push({ event: "lead_sucesso" });
-  }, []);
 
   return (
     <main className="success-screen">
